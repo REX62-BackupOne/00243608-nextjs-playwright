@@ -4,7 +4,7 @@ import chromium from '@sparticuz/chromium';
 import getlink from './getLink'; // Import the JavaScript function
 import type { Page } from 'playwright-core'; // Import the type for type annotations
 
-export const maxDuration = 60;
+export const maxDuration = 120;
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
