@@ -1,12 +1,12 @@
-import { NextResponse } from 'next/server';
+import { NextResponse,NextRequest } from 'next/server';
 import { chromium as playwright } from 'playwright-core';
 import chromium from '@sparticuz/chromium';
 
 export const maxDuration = 60;
 export const dynamic = 'force-dynamic';
 
-export async function GET() {
-  const url = req.query.url;
+export async function GET(request: NextRequest) {
+  const url = request.nextUrl.searchParams.get('url');
   console.log(url)
   const browser = await playwright.launch({
     args: chromium.args,
