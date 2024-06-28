@@ -2,6 +2,7 @@ async function getlink(url, page) {
     const f1 = Date.now();
     try {
       if (url) {
+        console.log("url is : "+ url)
         await page.goto('https://webtor.io/#/torrent-to-ddl');
         await page.keyboard.press('Enter');
         await wait(1000);
