@@ -4,12 +4,12 @@ async function getlink(url, page) {
       if (url) {
         await page.goto('https://webtor.io/#/torrent-to-ddl');
         await page.keyboard.press('Enter');
-        await wait(2000);
+        await wait(1000);
         await page.waitForSelector('#__BVID__67');
         await page.type('#__BVID__67', url);
         await wait(1000);
         await page.keyboard.press('Enter');
-        await wait(2000);
+        await wait(1000);
   
         await page.waitForSelector('#app > div.content > div > div > div > div:nth-child(1) > div > div.card > div.card-body.header > div > a.btn.my-btn-link.zip');
         await page.click('#app > div.content > div > div > div > div:nth-child(1) > div > div.card > div.card-body.header > div > a.btn.my-btn-link.zip');
